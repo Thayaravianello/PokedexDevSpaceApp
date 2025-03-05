@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PokedexDevSpaceApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+
+        <item name="colorPrimary" >@color/backgroundPokedexPreto</item>
+        <item name="colorPrimaryVariant" >@color/backgroundPokedex</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+
+        //cores secundarias
+
+        <item name="colorSecondary" >@color/backgroundPokedex</item>
+        <item name="colorSecondaryVariant" >@color/backgroundPokedexPreto</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        //status bar
+
+        <item name="android:statusBarColor">@color/backgroundPokedex</item>
+
+        //background da janela
+        <item name="android:windowBackground">@color/backgroundPokedexPreto</item>
+
+
+
+
+
+
+
+
+
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+
+
+    <style name="Theme.PokedexDevSpaceApp" parent="Base.Theme.PokedexDevSpaceApp" />
+</resources>
