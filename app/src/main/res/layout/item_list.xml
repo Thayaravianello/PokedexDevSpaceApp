@@ -12,8 +12,9 @@
         android:layout_width="154dp"
         android:layout_height="202dp"
         android:background="@color/backgroundPokedexPretoclaro"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="6dp"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
