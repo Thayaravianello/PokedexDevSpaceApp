@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.criattussolution.pokedexdevspaceapp.databinding.ActivityMainBinding
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val adapterPokemon = pokemonAdapter()
 
         recycle.adapter = adapterPokemon
-        recycle.layoutManager = LinearLayoutManager(this)
+        recycle.layoutManager = GridLayoutManager(this , 2)
         adapterPokemon.submitList(listPokemons)
 
     }
@@ -57,11 +58,9 @@ val listPokemons = listOf(
         R.drawable.venusauro
 
     ),
-    pokemonsList(
-        name = "Venusaur",
-        R.drawable.venusauro
 
-    ),
+
+
     pokemonsList(
         name = "Charmander",
         R.drawable.charmander
@@ -77,6 +76,9 @@ val listPokemons = listOf(
         R.drawable.charizard
 
     ),
+
+
+
     pokemonsList(
         name = "Squirtle",
         R.drawable.squirtle
@@ -92,6 +94,9 @@ val listPokemons = listOf(
         R.drawable.blastoise
 
     ),
+
+
+
     pokemonsList(
         name = "Catepie",
         R.drawable.caterpie

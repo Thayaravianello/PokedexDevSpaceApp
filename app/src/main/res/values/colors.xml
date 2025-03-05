@@ -7,6 +7,7 @@
     //BACKGROUND TELAS
     <color name="backgroundPokedex">#bb484b</color>
     <color name="backgroundPokedexPreto">#2b292c</color>
+    <color name="backgroundPokedexPretoclaro">#595859</color>
 
     //BACKGROUNDS POKEMONS
 
