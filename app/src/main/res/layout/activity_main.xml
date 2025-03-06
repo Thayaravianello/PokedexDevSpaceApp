@@ -14,7 +14,6 @@
         android:layout_height="143dp"
         android:background="@color/backgroundPokedex"
         android:gravity="center|start"
-        android:paddingStart="16dp"
         android:textColor="#FAFAFA"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
