@@ -1,6 +1,7 @@
 package com.criattussolution.pokedexdevspaceapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,8 +32,14 @@ class MainActivity : AppCompatActivity() {
         val adapterPokemon = pokemonAdapter()
 
         recycle.adapter = adapterPokemon
-        recycle.layoutManager = GridLayoutManager(this , 2)
+        recycle.layoutManager = GridLayoutManager(this, 2)
         adapterPokemon.submitList(listPokemons)
+
+
+        adapterPokemon.setOnClickListener { listaPokemon ->
+
+
+        }
 
     }
 
@@ -60,7 +67,6 @@ val listPokemons = listOf(
     ),
 
 
-
     pokemonsList(
         name = "Charmander",
         R.drawable.charmander
@@ -78,7 +84,6 @@ val listPokemons = listOf(
     ),
 
 
-
     pokemonsList(
         name = "Squirtle",
         R.drawable.squirtle
@@ -94,7 +99,6 @@ val listPokemons = listOf(
         R.drawable.blastoise
 
     ),
-
 
 
     pokemonsList(
