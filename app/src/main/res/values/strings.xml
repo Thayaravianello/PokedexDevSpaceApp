@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PokedexDevSpaceApp</string>
+    <string name="title_app_pokedex">POKEDEX</string>
 </resources>
