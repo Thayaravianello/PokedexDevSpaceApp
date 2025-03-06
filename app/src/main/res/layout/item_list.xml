@@ -24,7 +24,7 @@
         android:paddingBottom="10dp"
         android:layout_width="139dp"
         android:layout_height="40dp"
-        android:text="NamePokemon"
+        android:text="@string/namepokemon"
         android:textColor="#F0F0F0"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/rv_img"
