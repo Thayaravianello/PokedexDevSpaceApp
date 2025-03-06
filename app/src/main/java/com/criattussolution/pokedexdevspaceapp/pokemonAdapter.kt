@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 class pokemonAdapter :
     ListAdapter<pokemonsList, pokemonAdapter.pokemonViewHolder>(pokemonDiffutil()) {
 
-        private lateinit var onClickListener: (pokemonsList)-> Unit
+    private lateinit var onClickListener: (pokemonsList) -> Unit
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): pokemonViewHolder {
@@ -37,21 +37,20 @@ class pokemonAdapter :
     }
 
 
-     fun setOnClickListener(onClick: (pokemonsList)-> Unit){
+    fun setOnClickListener(onClick: (pokemonsList) -> Unit) {
         onClickListener = onClick
 
     }
 
 
-
     //criar class viewholder = view que segura os dados
 
-    class pokemonViewHolder(private val view: View ) : RecyclerView.ViewHolder(view) {
+    class pokemonViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         private val tvPokemon = view.findViewById<TextView>(R.id.title_recyv_poke)
         private val imgPokemon = view.findViewById<ImageView>(R.id.rv_img)
 
-        fun bind(pokemonsList: pokemonsList , onCilick :(pokemonsList)-> Unit) {
+        fun bind(pokemonsList: pokemonsList, onCilick: (pokemonsList) -> Unit) {
             tvPokemon.text = pokemonsList.name
             imgPokemon.setImageResource(pokemonsList.imgPokemon)
 
