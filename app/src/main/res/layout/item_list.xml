@@ -12,6 +12,7 @@
         android:layout_width="154dp"
         android:layout_height="202dp"
         android:background="@color/backgroundPokedexPretoclaro"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:paddingBottom="10dp"
