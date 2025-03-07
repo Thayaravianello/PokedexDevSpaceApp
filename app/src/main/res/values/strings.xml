@@ -3,4 +3,19 @@
     <string name="title_app_pokedex">POKEDEX</string>
     <string name="namepokemon">NamePokemon</string>
     <string name="todo">TODO</string>
+    <string name="exp">EXP</string>
+    <string name="def">DEF</string>
+    <string name="atk">ATK</string>
+    <string name="charizard">Charizard</string>
+    <string name="poder">Poder</string>
+    <string name="power">Power</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="_1_7m">1.7M</string>
+    <string name="spd">SPD</string>
+    <string name="base_stats">Base Stats</string>
+    <string name="_90_5_kg">90.5 KG</string>
+    <string name="pokedex">Pokedex</string>
+    <string name="_006">#006</string>
+    <string name="hp">HP</string>
 </resources>

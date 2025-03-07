@@ -48,6 +48,9 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation("com.google.android.material:material:1.12.0")
 
+
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -56,4 +59,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+
 }

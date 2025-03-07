@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity() {
 val listPokemons = listOf(
     pokemonsList(
         name = "Bulbasaur ",
-        R.drawable.bulbasaur
+        R.drawable.bulbasaur,
+        
 
     ),
 
