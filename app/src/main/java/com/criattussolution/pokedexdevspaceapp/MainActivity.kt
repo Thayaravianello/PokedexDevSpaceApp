@@ -33,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         adapterPokemon.setOnClickListener { listaPokemon ->
                 val intent = Intent(this, EvolutionPokemonsWindow::class.java)
+
+
+
             startActivity(intent)
 
         }
