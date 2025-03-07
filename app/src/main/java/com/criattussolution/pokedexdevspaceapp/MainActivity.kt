@@ -32,7 +32,9 @@ class MainActivity : AppCompatActivity() {
 
 
         adapterPokemon.setOnClickListener { listaPokemon ->
-                val intent = Intent(this, EvolutionPokemonsWindow::class.java)
+            val intent = Intent(this, EvolutionPokemonsWindow::class.java)
+            intent.putExtra("name", listaPokemon.name)
+            intent.putExtra("imgPokemon", listaPokemon.imgPokemon)
 
 
 
@@ -55,9 +57,9 @@ val listPokemons = listOf(
     pokemonsList(
         name = "Bulbasaur ",
         R.drawable.bulbasaur,
-        
 
-    ),
+
+        ),
 
     pokemonsList(
         name = "Ivysaur ",

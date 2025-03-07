@@ -178,7 +178,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_pokemon"
         android:layout_width="192dp"
         android:layout_height="230dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
@@ -201,7 +201,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/title_tv_evolution_number"
         app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toEndOf="@+id/icon_return_tv_evolution"
+        app:layout_constraintStart_toEndOf="@+id/tv_evolution"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -216,23 +216,23 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.563"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/img_pokemon"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.114" />
 
     <ImageView
-        android:id="@+id/icon_return_tv_evolution"
+        android:id="@+id/tv_evolution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/img_pokemon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@drawable/arrow_left"
         app:tint="@color/white" />
 
-   <ProgressBar
+    <ProgressBar
         android:id="@+id/progressBarOne"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="280dp"
