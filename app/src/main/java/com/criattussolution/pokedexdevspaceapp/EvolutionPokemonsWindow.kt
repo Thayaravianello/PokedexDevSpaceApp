@@ -19,7 +19,7 @@ class EvolutionPokemonsWindow : AppCompatActivity() {
 
 
 
-        val tituloNomePokemon = findViewById<TextView>(R.id.title_tv_evolution_namePokemon)
+        /*val tituloNomePokemon = findViewById<TextView>(R.id.title_tv_evolution_namePokemon)
         val imagemPokemonPrincipal = findViewById<ImageView>(R.id.img_pokemon)
         val setaRetornar = findViewById<ImageView>(R.id.tv_evolution)
         val numberPokemon = findViewById<TextView>(R.id.title_tv_evolution_number)
@@ -36,7 +36,7 @@ class EvolutionPokemonsWindow : AppCompatActivity() {
         val BarraProgressoFour = findViewById<ProgressBar>(R.id.progressBarFour)
         val BarraProgressoFive = findViewById<ProgressBar>(R.id.progressBarFive)
 
-
+*/
 
 
 
