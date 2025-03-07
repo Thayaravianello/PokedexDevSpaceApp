@@ -7,5 +7,7 @@ data class pokemonsList(
     //como construir
 
     val name :String,
-    @DrawableRes val imgPokemon:Int
+    @DrawableRes val imgPokemon:Int,
+
+
 )

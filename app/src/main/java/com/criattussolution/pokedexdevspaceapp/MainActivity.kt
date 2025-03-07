@@ -1,5 +1,6 @@
 package com.criattussolution.pokedexdevspaceapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -31,11 +32,16 @@ class MainActivity : AppCompatActivity() {
 
 
         adapterPokemon.setOnClickListener { listaPokemon ->
-
+                val intent = Intent(this, EvolutionPokemonsWindow::class.java)
+            startActivity(intent)
 
         }
 
     }
+
+//    private fun intent(mainActivity: MainActivity, java: Class<EvolutionPokemonsWindow>): Intent? {
+//        return (intent)
+//    }
 
 }
 
