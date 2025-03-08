@@ -1,120 +1,59 @@
 package com.criattussolution.pokedexdevspaceapp
 
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.criattussolution.pokedexdevspaceapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val pokemonViewModel: PokemonViewModel by viewModels()
+    private val pokemonAdapter = PokemonAdapter()
+
+    private val errorMessage = "Erro ao carregar a lista de Pokémons"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.rvPokemon.layoutManager = GridLayoutManager(this, 2)
+        binding.rvPokemon.adapter = pokemonAdapter
 
-        //CRIAR DATA CLASS - ok
-        //CRIAR LISTA FROM DATA CLASS - ok
-        //CRIAR ADAPTER - ok
-        //SET ADAPTER
-        // LINEAR LAYOUTMANAGER
-        // SUBMETER A LISTA
+        pokemonViewModel.pokemonList.observe(this, Observer { pokemonList ->
+            if (pokemonList != null){
+                pokemonAdapter.submitList(pokemonList)
+            } else {
+                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+            }
+        })
 
+        pokemonViewModel.isLoading.observe(this, Observer { isLoading ->
 
-        val recycle = binding.rvPokemon
-        val adapterPokemon = pokemonAdapter()
+        })
 
-        recycle.adapter = adapterPokemon
-        recycle.layoutManager = GridLayoutManager(this, 2)
-        adapterPokemon.submitList(listPokemons)
+        pokemonViewModel.searchPokemonList()
 
+        binding.rvPokemon.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int){
+                super.onScrolled(recyclerView, dx, dy)
 
-        adapterPokemon.setOnClickListener { listaPokemon ->
+                val layoutManager = recyclerView.layoutManager as GridLayoutManager
+                val visibleItemCount = layoutManager.childCount
+                val totalItemCount = layoutManager.itemCount
+                val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
 
-
-        }
-
+                if (!pokemonViewModel.isLoading.value!! && (visibleItemCount +
+                        firstVisibleItemPosition) >= totalItemCount -5 ){
+                    pokemonViewModel.searchPokemonList()
+                }
+            }
+        })
     }
-
 }
-
-
-//CRIAR LISTA
-
-val listPokemons = listOf(
-    pokemonsList(
-        name = "Bulbasaur ",
-        R.drawable.bulbasaur
-
-    ),
-
-    pokemonsList(
-        name = "Ivysaur ",
-        R.drawable.ivysauro
-
-    ),
-    pokemonsList(
-        name = "Venusaur",
-        R.drawable.venusauro
-
-    ),
-
-
-    pokemonsList(
-        name = "Charmander",
-        R.drawable.charmander
-
-    ),
-    pokemonsList(
-        name = "Charmeleon",
-        R.drawable.charmeleon
-
-    ),
-    pokemonsList(
-        name = "Charizard",
-        R.drawable.charizard
-
-    ),
-
-
-    pokemonsList(
-        name = "Squirtle",
-        R.drawable.squirtle
-
-    ),
-    pokemonsList(
-        name = "Wartortle",
-        R.drawable.wartortle
-
-    ),
-    pokemonsList(
-        name = "Blastoise",
-        R.drawable.blastoise
-
-    ),
-
-
-    pokemonsList(
-        name = "Catepie",
-        R.drawable.caterpie
-
-    ),
-    pokemonsList(
-        name = "Metapod",
-        R.drawable.metapod
-
-    ),
-    pokemonsList(
-        name = "Butterfree",
-        R.drawable.butterfree
-
-    ),
-)
-
